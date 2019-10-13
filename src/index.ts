@@ -1,8 +1,8 @@
-export interface Event {
+export interface IEvent {
     name: string;
 }
 
-export default async(event: Event): Promise<any> => {
+export default async (event: IEvent): Promise<any> => {
     let response;
     try {
         response = {
@@ -17,4 +17,4 @@ export default async(event: Event): Promise<any> => {
         return err;
     }
     return response;
-}
+};
