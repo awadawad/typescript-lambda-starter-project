@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Globals:
+  Function:
+    Runtime: nodejs10.x
+    Timeout: 180
+    Tracing: Active
+
+Resources:
+  Hello:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.default
+      CodeUri: ./dist/index
